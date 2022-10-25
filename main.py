@@ -1,9 +1,5 @@
 #!/usr/bin/python
 
-#import argparse
-#import random
-#import hashlib
-import string
 import re
 from collections import defaultdict
 
@@ -17,7 +13,6 @@ eventlog = 'events.log'
 minutecodes = defaultdict(int)
 
 def doeventlogparse():
-#    log_pattern = re.compile('^[^\[]+\[([^\s]+)\s+([\d]{2}:[\d]{2}):[\d]{2}\]\s+(\w+)')
     log_pattern = re.compile('^[^\[]*\[([^\s]+)\s+([\d]{2}:[\d]{2}):[\d]{2}\]\s+(\w+)')
 
     with open(eventlog, 'r') as events:
